@@ -1,7 +1,3 @@
-addEventListener('load', function(e) {
-  document.querySelector('#test').innerHTML = 'Generator';
-});
-
 
 function runGeneratorTest(){
 	let stream = createStream([]);
@@ -182,3 +178,6 @@ class GeneratorClient {
 	}
 
 }
+
+
+runGeneratorTest();
