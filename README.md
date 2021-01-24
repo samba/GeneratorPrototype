@@ -15,3 +15,6 @@ The downside of this approach is that if (when) a client fails to correctly proc
 
 Ideas for future improvements on this experiment:
 * Structure the Client as an array interface, with a `.map()`, `.filter()` etc. 
+
+
+The interesting bits here start with `runGeneratorTest()` in [`script.js`](./script.js).
