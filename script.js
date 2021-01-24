@@ -3,28 +3,10 @@ addEventListener('load', function(e) {
 });
 
 
-function randomString(len){
-	let res = [0];
-	for(let i = (len || 10); i; i--){
-		res[i] = (Math.random() * 256) >>0;
-	
-	}
-	return String.fromCharCode.apply(String, res);
-}
-
-function hashString(str, key){
-	let val = 5241;
-	for(let i = 0; i < str.length; i++){
-		val = (val << 5) + ((val - str.charCodeAt(i)) ^ key);
-	}
-	return val;
-}
-
-
 function runGeneratorTest(){
 	let stream = createStream([]);
 	
-	for(let i = 0; i < 1000; i++){
+	for(let i = 0; i < 100; i++){
 		stream.push({ value: i });
 	}
 
@@ -50,6 +32,25 @@ function runGeneratorTest(){
 
 }
 
+
+
+
+function randomString(len){
+	let res = [0];
+	for(let i = (len || 10); i; i--){
+		res[i] = (Math.random() * 256) >>0;
+	
+	}
+	return String.fromCharCode.apply(String, res);
+}
+
+function hashString(str, key){
+	let val = 5241;
+	for(let i = 0; i < str.length; i++){
+		val = (val << 5) + ((val - str.charCodeAt(i)) ^ key);
+	}
+	return val;
+}
 
 
 
